@@ -9,15 +9,15 @@ text_extensions: [ 'css', 'erb', 'haml', 'htm', 'html', 'js', 'less', 'markdown'
 output_dir: output
 
 # Set domain for use in feeds
-base_url: http://yourdomain.nl
+base_url: http://stefanvr.webfactional.com
 title: '*blog title*'
-author_name: '*author name*'
-author_uri: '*author uri*'
+author_name: 'Stefan van Raaphorst'
+author_uri: 'http://stefanvr.webfactional.com'
 
 deploy:
   default:
     kind: rsync
-    dst: <your_hoster_address>
+    dst: stefanvr.webfactional.com:~/webapps/htdocs
     options: ['-gpPrtvz', '--delete-after']
 
 # A list of index filenames, i.e. names of files that will be served by a web
