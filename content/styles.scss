@@ -2,8 +2,7 @@
 @import 'rocks';
 
 @include reset;
-
-$color-blue: #0071BC;
+$base-color: #6d136d;
 
 // Elements
 body {
@@ -24,7 +23,7 @@ h1, h2 {
 h1 {
     line-height: lines(1.5);
     font-size: 24px;
-    color: $color-blue;
+    color: $base-color;
     margin-top: lines(2);
 
     &:first-child {
@@ -58,7 +57,7 @@ pre {
 }
 
 a {
-    @include link-colors-lighten($color-blue);
+    @include link-colors-lighten($base-color);
 
     &:hover, &:focus {
         -webkit-transition: color .2s linear;
@@ -115,7 +114,7 @@ body {
 }
 
 [role="banner"] {
-    border-top: lines(.5) solid $color-blue;
+    border-top: lines(.5) solid $base-color;
     border-bottom: 1px solid #eee;
     margin: 0 ($grid-margin * -1) $line;
     padding: 0 $grid-margin;
@@ -182,7 +181,7 @@ body {
 
 // Modules
 .title {
-    @include link-colors-lighten($color-blue);
+    @include link-colors-lighten($base-color);
     @include link-hover;
     display: block;
     font-weight: bold;
@@ -210,7 +209,7 @@ article footer {
 }
 
 aside img {
-    border: 1px solid #111;
+    border: 1px solid $base-color;
     width: 128px;
     height: 128px;
 }

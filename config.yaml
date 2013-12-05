@@ -10,7 +10,7 @@ output_dir: output
 
 # Set domain for use in feeds
 base_url: http://stefanvr.webfactional.com
-title: '*blog title*'
+title: 'Stefan''s  Virtual Reality'
 author_name: 'Stefan van Raaphorst'
 author_uri: 'http://stefanvr.webfactional.com'
 

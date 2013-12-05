@@ -18,7 +18,7 @@ At companies like [8thlight][], with craftsman like [Uncle Bob] and where [clean
 Truth said: blogging has been at the back of my mind, but I always blocked myself. Now I finally kicked myself in the butt.
 
 ###Tips and tricks for getting things done
-I half started more then once. My main idea was a crossing between [LifeHacker] on "Tips, tricks, and downloads for getting things done" and [Scott Hanselman] with his "ultimate tools list". An article like the one from [Arjan van der Gaag] explaining his workflow on an Mac is in line with my thoughts. In the past I considerd that such articles likely to become one off's topic in my head, no structure and bound to fail for me after a few articles.
+I half started more then once. My main idea was a crossing between [LifeHacker] on "Tips, tricks, and downloads for getting things done" and [Scott Hanselman] with his "ultimate tools list". An article like the one from [Arjan van der Gaag] explaining his workflow on an Mac is in line with my thoughts. In the past I considerd that such articles would likely become one off's topic in my head, no structure and bound to fail for me after a few articles.
 
 Moving to a new technology stack, trying to find my way and getting effective again, fuels me to start this journal. Just letting go of the "what if's", forming a vision and trusting in the outcome.
 
