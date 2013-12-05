@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+SASS_LOAD_PATHS = [
+  File.join(`bundle show bourbon`.chomp, *%w[app assets stylesheets]),
+  File.join(`bundle show rocks`.chomp,   *%w[app assets stylesheets])
+]
+
+compile '/styles/' do
+  filter :sass, syntax: :scss, load_paths: SASS_LOAD_PATHS
+end
+
+compile '/script/' do
+  filter :coffeescript
+end
+
+compile '/blog/*' do
+  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
+  filter :typogruby
+  layout 'post'
+  layout 'default'
+end
+
+compile '/feed/' do
+  filter :erb
+end
+
+compile '/projects/' do
+  filter :kramdown, auto_ids: false, coderay_line_numbers: nil, coderay_tab_width: 2
+  filter :typogruby
+  layout 'default'
+end
+
+compile '*' do
+  unless item.binary?
+    filter :erb
+    layout 'default'
+  end
+end
+
+route '/styles/' do
+  '/styles.css'
+end
+
+route '/script/' do
+  '/script.js'
+end
+
+route '/' do
+  '/index.html'
+end
+
+route '/blog/*' do
+  item.identifier.chop + '.html'
+end
+
+route '*' do
+  extension = item[:extension]
+  extension = 'html' if extension == 'md'
+  item.identifier.chop + '.' + extension
+end
+
+layout '*', :haml, format: :html5

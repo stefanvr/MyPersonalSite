@@ -1,0 +1,33 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'utf-8' }
+    %title= page_title
+    %link{ rel: 'stylesheet', href: '/styles.css' }
+    - if @item[:tldr] && @item[:tldr] =~ /\S/
+      %meta{ name: 'description', value: @item[:tldr] }
+    - else
+      %meta{ name: 'description', value: '<_todo_site_decscription>' }
+    - if @item[:tags] && @item[:tags].any?
+      %meta{ name: 'keywords', value: @item[:tags].join(', ') }
+    %link{ rel: 'alternate', title: '#{@config[:title]}', type: 'application/atom+xml', href: '/feed.xml' }
+    %meta{ name: 'viewport', content: 'width=device-width' }
+    :javascript
+      var _gaq = [['_setAccount', 'UA-80284-1'], ['_trackPageview']];
+      (function(d, t) {
+          var g = d.createElement(t),
+              s = d.getElementsByTagName(t)[0];
+          g.async = true;
+          g.src = '//www.google-analytics.com/ga.js';
+          s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+  %body
+    #page
+      #{ render 'header' } 
+      #content
+        #{ render 'sidebar' }
+        %section{ role: 'main' }
+          = yield
+      %footer{ role: 'contentinfo' }
+        %p &copy; copyright #{Time.now.year} #{@config[:author_name]}.
+    %script{ src: '/script.js' }

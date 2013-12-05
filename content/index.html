@@ -1,0 +1,14 @@
+---
+title: #{@config[:title]}
+---
+<% articles_by_year.each do |year, articles| %>
+    <h2><%= year %></h2>
+    <ol class='articles'>
+    <% articles.each do |article| %>
+        <li>
+            <time datetime='<%= article[:created_at] %>'><%= attribute_to_time(article[:created_at]).strftime('%d %b') %></time>
+            <%= link_to article[:title], article %>
+        </li>
+    <% end %>
+    </ol>
+<% end %>

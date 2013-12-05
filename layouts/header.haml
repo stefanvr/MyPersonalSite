@@ -1,0 +1,6 @@
+%header{ role: 'banner' }
+  %a.title{ href: '/', rel: 'home' } #{@config[:title]}
+  %form{ action: 'http://www.google.com/cse', id: 'cse-search-box' }
+    %input{ type: 'hidden', name: 'cx', value: 'todo' }
+    %input{ type: 'hidden', name: 'ie', value: 'UTF-8' }
+    %input{ type: 'search', placeholder: 'Search site <TODO set cx>', name: 'q', size: '31', id: 'google-search-box' }
