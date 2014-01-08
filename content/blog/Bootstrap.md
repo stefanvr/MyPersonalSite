@@ -25,7 +25,7 @@ Moving to a new technology stack, trying to find my way and getting effective ag
 ### Knowledge base for myself
 With the power of search engines, keeping a personal knowledge base seems useless. Yet the following is not uncommon among the bloggers of the world:
 
-![Tweet from Ariejan: He googled and ended up on his own site](/images/searchandfind.PNG).
+![Tweet from Ariejan: He googled and ended up on his own site](../images/searchandfind.PNG).
 
 Re-finding good information sometimes seems harder than finding information. So as an alternative of keeping bookmarks and text files[^1] with notes on my hard drive to search through, why not put it on my blog.
 
