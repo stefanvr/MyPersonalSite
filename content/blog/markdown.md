@@ -2,14 +2,14 @@
 title: Markdown
 created_at: 2014-01-08 23:00
 kind: article
-tags: [flow]
+tags: [flow, shell, markdown]
 tldr: Shell live writing Markdown using Mou - clone github wiki, write some mark down, save, commit, push, WOOT!
 
 ---
 
 # Living in a Shell 
 
-[Markdown] is very popular these days for various reasons. One of those is the ability to write wiki pages, which can be rendered a bit more pleasant for the reader eyes. As text only gives an easy diff[^1] and wikis proof that rendering it can be nice too. Some times even fancy things like embedding [Websequencediagrams] is possible.
+[Markdown] is very popular these days for various reasons. One of those is the ability to write wiki pages, which can be rendered a bit more pleasant for the reader eyes. As text only gives an easy diff[^1] and wikis proof that rendering it can be nice too. Some times even fancy things like embedding [Websequencediagrams] is possible, diagram.
 
 So what about living inside a shell?
 
@@ -37,19 +37,20 @@ Open a shell on a nice spot on your file system
     $touch new article.md  
     $open article.md  
 
-    write some nice markdown and hit save
+    write some nice markdown, hit save and close MOU
 
+	$git add .
     $git commit -m "Useful message here please :-)"  
     $git push
    
 
-WOOT! Documentation all nice and updated for the readers.
+WOOT! Documentation all nice and updated for the readers and it feels like I never left the shell.
 
 ## Loving it 
 
 Markdown is also the weapon of choice for my site/blog, more on that soon. But for now the flow of writing notes in markdown from a shell and getting it out in the world has become a breeze.
 
-[^1]: Yeah, yeah, I know, I know MS-Word can diff and with proper track changes it can work..... but some how (unintentional )style changes in larger documents alway seem to mess up easy comparison .... and really styling is not my thing, but I want it to look nice.
+[^1]: Yeah, yeah, I know, I know: MS-Word can diff and with proper track changes discipline it can work..... but somehow (unintentional) style changes in larger documents always seem to mess up easy comparison .... and really styling is not my thing, but I want it to look nice.
 
 [Markdown]:            http://daringfireball.net/projects/markdown/
 [Websequencediagrams]: https://www.websequencediagrams.com/
